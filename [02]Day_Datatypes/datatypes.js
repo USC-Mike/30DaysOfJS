@@ -78,7 +78,6 @@ console.log(bodyTemp)
 // Math Objects
 
 const PI = Math.PI
-
 console.log(PI)
 
 
@@ -149,7 +148,7 @@ Template Literals (Template Strings)
 // Example 1
 console.log('3 oranges and 7 tequilla')
 let m = 3
-let o = 7
+let o = 10
 
 console.log(`${m} oranges and ${o} tequilla ${m + o}`)
 
@@ -212,3 +211,175 @@ let newString = '30 Days of JavaScript'
 console.log(newString.split()) // Changes to an array -> ["30 Days Of JavaScript"]
 console.log(newString.split(' ')) // Split to an array at space -> ["30", "Days", "Of", "JavaScript"]
 console.log(newString.split('')) //Split to an array at each letter
+
+// 8: trim()
+/*
+    Removes trailing space in the beginning or the end of a string.
+*/
+
+// 9: concat()
+/*
+    it takes many substrings and joins them.
+*/
+console.log(Lname.concat("years old"))
+
+// 10: startsWith
+/*
+    it takes a substring as an argument and it checks if the string starts with that specified substring. 
+    It returns a boolean(true or false).
+
+    //syntax
+    string.startsWith(substring)
+*/
+
+console.log(Fname.startsWith('Kurt'))
+
+// 11: endsWith
+/*
+    it takes a substring as an argument and it checks if the string ends with that specified substring. 
+    It returns a boolean(true or false).
+
+    //syntax
+    string.endsWith(substring)
+*/
+
+console.log(Lname.endsWith('o'))
+
+// 12: search
+/*
+    it takes a substring as an argument and it returns the index of the first match. 
+    The search value can be a string or a regular expression pattern.
+*/
+console.log(qoute.search('is'))
+
+/*
+    Exercise: Level 1
+*/
+
+// Declare a variable named challenge and assign it to an initial value '30 Days Of JavaScript'.
+let challenge = ' 30 Days of JavaScript '
+
+// Print the string on the browser console using console.log()
+console.log(challenge);
+
+// Print the length of the string on the browser console using console.log()
+console.log(challenge.length);
+
+// Change all the string characters to capital letters using toUpperCase() method
+console.log(challenge.toUpperCase());
+
+// Change all the string characters to lowercase letters using toLowerCase() method
+console.log(challenge.toLowerCase());
+
+// Cut (slice) out the first word of the string using substr() or substring() method
+console.log(challenge.substring(3, challenge.length));
+
+// Slice out the phrase Days Of JavaScript from 30 Days Of JavaScript.
+console.log(challenge.slice(3,7));
+
+// Check if the string contains a word Script using includes() method
+console.log(challenge.includes('Script'));
+
+// Split the string into an array using split() method
+console.log(challenge.split(''));
+
+// Split the string 30 Days Of JavaScript at the space using split() method
+console.log(challenge.split(' '));
+
+// Split the string at the comma and change it to an array.
+let tech = 'Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon'
+console.log(tech.split(' '));
+
+// Change 30 Days Of JavaScript to 30 Days Of Python using replace() method.
+console.log(challenge.replace('30 Days of Javascript', '30 Days of Python'));
+
+// What is character at index 15 in '30 Days Of JavaScript' string? Use charAt() method.
+console.log(challenge.charAt(15));
+
+// What is the character code of J in '30 Days Of JavaScript' string using charCodeAt()
+console.log(challenge.charCodeAt('J'));
+
+// Use indexOf to determine the position of the first occurrence of a in 30 Days Of JavaScript
+console.log(challenge.indexOf('3'));
+
+// Use lastIndexOf to determine the position of the last occurrence of a in 30 Days Of JavaScript.
+console.log(challenge.lastIndexOf('JavaScript'));
+
+// Use indexOf to find the position of the first occurrence of the word because in the following sentence:
+let newSentence = 'You cannot end a sentence with because because because is a conjunction'
+console.log(newSentence.indexOf('because'));
+
+// Use lastIndexOf to find the position of the last occurrence of the word because in the following sentence:
+console.log(newSentence.lastIndexOf('conjunction'));
+
+// Use search to find the position of the first occurrence of the word because in the following sentence
+console.log(newSentence.search('You'));
+
+// Use trim() to remove any trailing whitespace at the beginning and the end of a string.E.g ' 30 Days Of JavaScript '.
+console.log(challenge.trim());
+
+// Use startsWith() method with the string 30 Days Of JavaScript and make the result true
+console.log(challenge.startsWith(' '));
+
+// Use endsWith() method with the string 30 Days Of JavaScript and make the result true
+console.log(challenge.endsWith(' '));
+
+// Use match() method to find all the a’s in 30 Days Of JavaScript
+console.log(challenge.matchAll());
+
+// Use concat() and merge '30 Days of' and 'JavaScript' to a single string, '30 Days Of JavaScript'
+console.log(challenge.concat('and'));
+
+// Use repeat() method to print 30 Days Of JavaScript 2 times
+console.log(challenge.repeat(2));
+
+/*
+    Exercise: Level 2
+*/
+
+// Using console.log() print out the following statement:
+// The quote 'There is no exercise better for the heart than reaching down and lifting people up.' by John Holmes teaches us to help one another.
+let q = "The quote 'There is no exercise better for the heart than reaching down and lifting people up.' by John Holmes teaches us to help one another."
+console.log(q);
+
+// Using console.log() print out the following quote by Mother Teresa:
+// "Love is not patronizing and charity isn't about pity, it is about love. Charity and love are the same -- with charity you give love, so don't just give money but reach out your hand instead."
+let qt = "Love is not patronizing and charity isn't about pity, it is about love. Charity and love are the same -- with charity you give love, so don't just give money but reach out your hand instead."
+console.log(qt + 'by Mother Teresa');
+
+// Check if typeof '10' is exactly equal to 10. If not make it exactly equal.
+console.log(typeof(parseInt('10')));
+
+// Check if parseFloat('9.8') is equal to 10 if not make it exactly equal with 10.
+console.log(Math.ceil(parseFloat('9.8')));
+
+// Generate a random number between 0 and 100 inclusively.
+const randHundreds = Math.floor(Math.random() * 101)
+console.log(randHundreds);
+
+// Generate a random number between 50 and 100 inclusively.
+/* 
+    You need to know the range of the random.
+    Between 50 and 80, the range is 30 (80 - 50 = 30), then you add 1.
+
+    Therefor, the random would look like this :
+*/
+const randFiftyToHundreds = Math.floor(Math.random() * 51) + 50
+console.log(randFiftyToHundreds);
+
+// Generate a random number between 0 and 255 inclusively.
+const randTwoFifty = Math.floor(Math.random() * 256)
+console.log(randTwoFifty);
+
+// Use console.log() and escape characters to print the following pattern.
+/*
+    1 1 1 1 1
+    2 1 2 4 8
+    3 1 3 9 27
+    4 1 4 16 64
+    5 1 5 25 125
+
+    Use \t for tab and \n for new line
+*/
+let pattern = ' 1\t 1\t 1\t 1\t 1\t \n 2\t 1\t 2\t 4\t 8\t \n 3\t 1\t 3\t 9\t 27\t \n 4\t 1\t 4\t 16\t 64\t \n 5\t 1\t 5\t 25\t 125\t'
+console.log(pattern);
